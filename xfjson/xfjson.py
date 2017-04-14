@@ -59,7 +59,7 @@ class ByteStreamWriter(object):
         ln = len(strng)
         if(writeLen):
             if ln > 0x80000:
-                print "Data to big to encode this way"
+                print "Data too big to encode this way"
             self.writeUShort(ln)
         self._array += struct.pack(str(ln) +"s",bytes(strng))
 
